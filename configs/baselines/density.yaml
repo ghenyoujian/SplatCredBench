@@ -1,0 +1,4 @@
+baseline:
+  name: density
+  params:
+    normalize: true

@@ -1,0 +1,4 @@
+baseline:
+  name: opacity
+  params:
+    invert: false

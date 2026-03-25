@@ -1,0 +1,21 @@
+data:
+  scene_path: examples/scene_001/scene.npz
+  cameras_path: examples/scene_001/cameras.json
+  targets_path: examples/scene_001/targets.npy
+baseline:
+  name: hybrid
+  params:
+    opacity_weight: 0.4
+    density_weight: 0.3
+    reprojection_weight: 0.3
+metrics:
+  sru_auc:
+    retention_steps: 20
+  detection:
+    positive_threshold: 0.5
+  calibration:
+    bins: 10
+report:
+  save_curves: true
+  save_tables: true
+  html_title: SplatCredBench Report
