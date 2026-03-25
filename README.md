@@ -24,29 +24,6 @@ Feed-forward 3DGS pipelines can reconstruct scenes quickly, but confidence and r
 - `examples/`: minimal example layout.
 - `tests/`: smoke tests for imports, metrics, and CLIs.
 
-## Quickstart
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
-pytest -q
-```
-
-## Minimal usage
-
-```bash
-splatcred-eval --scene examples/scene_001/scene.npz --cameras examples/scene_001/cameras.json --targets examples/scene_001/targets.npy --baseline hybrid --config configs/default.yaml --report-dir outputs/eval_demo
-```
-
-```bash
-splatcred-prune --scene examples/scene_001/scene.npz --confidence outputs/eval_demo/summary.json --max-prune-ratio 0.3 --output outputs/pruned_scene.json
-```
-
-```bash
-splatcred-report --input-json outputs/eval_demo/summary.json --report-dir outputs/report_demo
-```
 
 ## Roadmap
 
@@ -55,15 +32,3 @@ splatcred-report --input-json outputs/eval_demo/summary.json --report-dir output
 - Expand confidence baselines and include learned confidence models.
 - Standardize benchmark protocols and reporting templates.
 
-## Citation
-
-If you use this repository, please cite:
-
-```bibtex
-@misc{splatcredb2026,
-  title={SplatCredBench: A Confidence Benchmark for Feed-Forward 3D Gaussian Splatting},
-  author={TODO},
-  year={2026},
-  note={GitHub repository}
-}
-```
