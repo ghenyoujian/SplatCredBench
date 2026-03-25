@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splatcredb"
+version = "0.1.0"
+description = "A confidence benchmark for feed-forward 3D Gaussian Splatting"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SplatCredBench Authors", email = "todo@example.com" }]
+dependencies = ["numpy", "pyyaml", "matplotlib", "scipy"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+splatcred-eval = "tools.evaluate:main"
+splatcred-prune = "tools.prune_and_render:main"
+splatcred-report = "tools.export_report:main"
+
+[tool.setuptools]
+packages = [
+  "splatcredb", "splatcredb.io", "splatcredb.features", "splatcredb.oracle", "splatcredb.baselines", "splatcredb.metrics", "splatcredb.pruning", "splatcredb.render", "splatcredb.report", "splatcredb.utils", "datasets", "datasets.loaders", "datasets.protocols", "tools"
+]

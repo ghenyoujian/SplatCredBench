@@ -1,0 +1,3 @@
+metrics:
+  sru_auc:
+    retention_steps: 20

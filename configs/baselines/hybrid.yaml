@@ -1,0 +1,6 @@
+baseline:
+  name: hybrid
+  params:
+    opacity_weight: 0.4
+    density_weight: 0.3
+    reprojection_weight: 0.3
